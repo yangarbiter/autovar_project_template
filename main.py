@@ -1,5 +1,10 @@
 from mkdir_p import mkdir_p
 
+from package.variables import auto_var
+
+
+def run_exp_name(auto_var):
+    pass
 
 
 def main():

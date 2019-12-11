@@ -1,7 +1,6 @@
 import logging
 
 from autovar import AutoVar
-from autovar.base import RegisteringChoiceType, VariableClass, register_var
 from autovar.hooks import (
     check_result_file_exist, save_result_to_file,
 )
@@ -16,6 +15,7 @@ auto_var = AutoVar(
     }
 )
 
+#from autovar.base import RegisteringChoiceType, VariableClass, register_var
 #class ExampleVarClass(VariableClass, metaclass=RegisteringChoiceType):
 #    """Example Variable Class"""
 #    var_name = "example"
