@@ -4,7 +4,7 @@ import json
 
 from mkdir_p import mkdir_p
 
-from stream.variables import auto_var, get_file_name
+from package.variables import auto_var, get_file_name
 from params import (
     sample_experiments
 )
