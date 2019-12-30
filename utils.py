@@ -50,7 +50,7 @@ class SampleExperiments(Experiments):
         return Experiments.__new__(cls, *args, **kwargs)
 
 def get_result(auto_var):
-    file_name = get_file_name(auto_var).replace("_", "-")
+    file_name = get_file_name(auto_var)
     file_format = auto_var.settings['file_format']
     file_path = os.path.join(auto_var.settings['result_file_dir'],
                              f"{file_name}.{get_ext(file_format)}")
