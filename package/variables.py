@@ -19,7 +19,7 @@ auto_var = AutoVar(
 )
 
 auto_var.add_variable_class(DatasetVarClass())
-auto_var.add_variable('random_seed', int
+auto_var.add_variable('random_seed', int)
 
 #from autovar.base import RegisteringChoiceType, VariableClass, register_var
 #class ExampleVarClass(VariableClass, metaclass=RegisteringChoiceType):
