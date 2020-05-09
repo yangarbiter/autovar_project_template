@@ -13,21 +13,23 @@ from autovar import AutoVar
 from autovar.hooks import get_ext
 
 from main import run_exp_name
-from experiments import run_experiment01
+import experiments
 
 logging.basicConfig(level=0)
 tex_base = "./tex_files"
 
+def _register_experiment(auto_var, exp_name):
+    mkdir_p(f"./results/{exp_name}")
+    auto_var.register_experiment(f'{exp_name}', getattr(experiments, f'run_{exp_name}'),
+            {'file_format': 'pickle', 'result_file_dir': f'./results/{exp_name}'})
+
 def setup_experiments(auto_var):
+    _register_experiment(auto_var, 'experiment01')
+    
     #exp_name = 'exp_name'
     #mkdir_p(f"./results/{exp_name}")
     #auto_var.register_experiment(f'{exp_name}', run_exp_name,
     #        {'file_format': 'pickle', 'result_file_dir': f'./results/{exp_name}'})
-
-    exp_name = 'experiment01'
-    mkdir_p(f"./results/{exp_name}")
-    auto_var.register_experiment(f'{exp_name}', run_experiment01,
-            {'file_format': 'pickle', 'result_file_dir': f'./results/{exp_name}'})
 
 
 class Experiments():
