@@ -1,8 +1,5 @@
 import os
 import logging
-import json
-
-from mkdir_p import mkdir_p
 
 from package.variables import auto_var, get_file_name
 from params import (
