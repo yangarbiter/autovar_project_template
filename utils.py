@@ -12,7 +12,6 @@ from package.variables import auto_var, get_file_name
 from autovar import AutoVar
 from autovar.hooks import get_ext
 
-from main import run_exp_name
 import experiments
 
 logging.basicConfig(level=0)
