@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 DEBUG = True if os.environ.get('DEBUG', False) else False
 
-def main(auto_var):
+def main(args, auto_var):
     experiments = [
         sample_experiments(),
     ]
@@ -35,4 +35,7 @@ def delete_file(auto_var):
 
 if __name__ == "__main__":
     setup_experiments(auto_var)
-    main(auto_var)
+    parser = argparse.ArgumentParser(description='Run tasks.')
+    parser.add_argument('--allow_failure', action='store_true', help='')
+    args = parser.parse_args()
+    main(args, auto_var)
