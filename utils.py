@@ -67,7 +67,7 @@ def get_result(auto_var):
         else:
             raise ValueError(f"Not supported file format {file_format}")
     except Exception as e:
-        print("problem with %s" % file_path)
+        print("Problem with %s. Unexpected error: %s" % *file_path, str(e)))
         raise e
     return ret
 
