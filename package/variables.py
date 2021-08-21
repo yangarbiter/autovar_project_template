@@ -29,6 +29,13 @@ auto_var = AutoVar(
 
 auto_var.add_variable_class(DatasetVarClass())
 auto_var.add_variable('random_seed', int)
+#auto_var.add_variable('eps', float)
+#auto_var.add_variable('optimizer', str)
+#auto_var.add_variable('learning_rate', float, default=1e-2)
+#auto_var.add_variable('batch_size', int, default=64)
+#auto_var.add_variable('momentum', float, default=0.9)
+#auto_var.add_variable('epochs', int, default=2)
+#auto_var.add_variable('weight_decay', float, default=0.)
 
 #from autovar.base import RegisteringChoiceType, VariableClass, register_var
 #class ExampleVarClass(VariableClass, metaclass=RegisteringChoiceType):
