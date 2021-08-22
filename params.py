@@ -1,6 +1,8 @@
 
 from utils import SampleExperiments
 
+__all__ = ['sample_experiments']
+
 random_seed = list(range(1))
 
 class sample_experiments(SampleExperiments):
