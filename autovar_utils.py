@@ -35,7 +35,7 @@ class Experiments():
     name: str
     experiment_fn: Callable[[AutoVar], Any]
     grid_params: Union[List[Dict[str, str]], Dict[str, str]]
-    run_param: Dict[str, Any]
+    run_param: Dict[str, Any] = {'verbose': 1, 'n_jobs': 4,}
 
     def __init__(self):
         pass
@@ -43,12 +43,6 @@ class Experiments():
     def __call__(self):
         return self.experiment_fn, self.name, self.grid_params, self.run_param
 
-class SampleExperiments(Experiments):
-    def __new__(cls, *args, **kwargs):
-        # if attribute is function it will pass self as one of its argument
-        cls.experiment_fn = 'sample'
-        cls.run_param = {'verbose': 1, 'n_jobs': 4,}
-        return Experiments.__new__(cls, *args, **kwargs)
 
 def get_result(auto_var):
     file_name = get_file_name(auto_var)

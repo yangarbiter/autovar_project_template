@@ -3,9 +3,7 @@ import logging
 import os
 
 from package.variables import auto_var, get_file_name
-from params import (
-    sample_experiments
-)
+from params import *
 from utils import setup_experiments
 
 logging.basicConfig(level=logging.DEBUG)
@@ -14,7 +12,7 @@ DEBUG = True if os.environ.get('DEBUG', False) else False
 
 def main(args, auto_var):
     experiments = [
-        sample_experiments(),
+        SampleExperiments(),
     ]
     grid_params = []
     for exp in experiments:
